@@ -1,9 +1,11 @@
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--body-color);
 }
 
+
 header{
-    background-color: navy;
+    background-color: goldenrod;
     color: wheat;
     width: 100%;
     padding: 10px;
@@ -17,6 +19,11 @@ header .brand {
     font-weight: bold;
 }
 
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
 nav ul {
     list-style: none;
     margin: 0px;
@@ -26,14 +33,26 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0px 10px;
+    display: inline-block;
+    padding: 0px 20px;
+    margin: 0px 2px;
+    
 }
 nav ul li:hover {
-    background-color: black;
+    background-color: sienna;
 }
 
 /* BANNER */
 
+.big-banner {
+    height: 300px;
+    font-size: 30px;
+    background-image: url(./big-banner.jpg);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
 
 
 /* MAIN */
@@ -45,11 +64,40 @@ main{
 }
 
 main section{
-display: flex
-;
+    display: flex;
+    }
+    
+    main section h2{
+    border-right: 3px solid blue;
+    }
+
+#about {
+    flex-wrap: wrap ;
 }
 
-main section h2{
+#projects {
+    flex-wrap: wrap;
+}
 
+#contact div {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact div a {
+    display: inline-block;
+    background-image: linear-gradient(270deg, black 0%, black 100%);
+    font-size: 24px;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto 5px;
+    transition: all 0.25s ease-in;
+    text-decoration: none;
+}
+
+#contact div a:hover {
+    background-size: auto 100%;
 }
 
