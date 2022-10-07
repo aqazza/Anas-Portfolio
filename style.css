@@ -1,28 +1,42 @@
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--body-color);
+    box-sizing: border-box;
 }
 
 
 header{
-    background-color: goldenrod;
-    color: wheat;
+    background-color: darkolivegreen;
+    color: burlywood;
     width: 100%;
+    height: 100px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
 
 header .brand {
     font-size: 1.5em;
     font-weight: bold;
 }
 
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
+
+
+/* nav {    
+    display: inline-block;
+    background-image: linear-gradient(270deg, black 0%, black 100%);
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto 3px;
+    transition: all 0.25s ease-in;
+    text-decoration: none;
+} */
 
 nav ul {
     list-style: none;
@@ -32,28 +46,51 @@ nav ul {
     flex-wrap: wrap;
 }
 
-nav ul li {
-    display: inline-block;
-    padding: 0px 20px;
-    margin: 0px 2px;
-    
+h2 { 
+    margin: 0;
+    display: block;
 }
-nav ul li:hover {
+
+nav li {
+    margin: 0px 10px;
+}
+
+nav ul li a{
+    color: burlywood;
+    display: inline-block;
+    background-image: linear-gradient(270deg, black 0%, black 100%);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto 5px;
+    transition: all .25s ease-in;
+    padding: 12px;
+    margin: 0 4px;
+    font-size: 24px;   
+}
+nav ul li a:hover {
+    background-size: 0%;
     background-color: sienna;
 }
 
 /* BANNER */
 
 .big-banner {
-    height: 300px;
+    height: 150px;
     font-size: 30px;
     background-image: url(./big-banner.jpg);
+    background-size:auto;
+    background-position: center;
+    padding: 3% 3%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    text-align: right;
 
 }
-
+.big-banner h2 {
+    padding: 0px;
+    background-color: transparent;
+}
 
 /* MAIN */
 
@@ -63,23 +100,97 @@ main{
  margin-right: auto;
 }
 
-main section{
+.page-section{
+    margin: 25px 0;
+    padding: 10px 0;
     display: flex;
-    }
-    
-    main section h2{
-    border-right: 3px solid blue;
-    }
-
-#about {
-    flex-wrap: wrap ;
-}
-
-#projects {
+    flex-direction: row;
     flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    }
+
+.page-section div {
+    width: 75%;
+    border-left: 5px solid var(--text-color);
+}
+    
+.page-section h2{
+    font-size: 40px;
+    border-right: 3px solid brown;
+    text-align: right;
+    padding-right: 10px;
+    width: 20%;
+    text-align: right;
+    line-height: 4.5;
+    }
+
+#about p {
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: column;
+    font-weight:bold ;
 }
 
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.code-ref {
+    background-image: url(./Pictures/istockphoto-1356364268-170667a.jpg);
+
+}
+.code-ref span {
+    margin-left: -100px;
+}
+.marketing {
+    background-image: url(./Pictures/Why-You-Need-a-Marketing-Plan-Template-1.jpg);
+}
+.marketing span {
+    margin-left: -100px;
+}
+.schooling {
+    background-image: url(./Pictures/CSUF.jpg);
+}
+.schooling span {
+    margin-left: -100px;
+}
+.sales {
+    background-image: url(./Pictures/ace-next-sales-call.jpg);
+    background-position: center;
+}
+.sales span {
+    margin-left: -100px;
+}
+
+.flex-item {
+    border: (5px solid black);
+    background-color: transparent;
+    color: var(--text-color);
+    min-height: 150px;
+    max-height: 150px;
+    flex-basis: calc(50% - 1em);
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    margin: .5em;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all .5s;
+    font-size: .9rem;
+    width: 50%;
+    justify-content: flex-start;
+}
+#projects h2{
+    flex-wrap: wrap;
+    font-size: 40px;
+}
+    
 #contact div {
+    font-size: 40px;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -92,12 +203,13 @@ main section{
     padding: 10px;
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: auto 5px;
+    background-size: auto 3px;
     transition: all 0.25s ease-in;
     text-decoration: none;
 }
 
 #contact div a:hover {
-    background-size: auto 100%;
+    
+    background-color: sienna;
 }
 
